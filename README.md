@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-This project is a RESTful Web API built using ASP.NET Core 8 following Clean Architecture principles.
+This project is a RESTful Web API built using **ASP.NET Core 8** following **Clean Architecture** principles.
 
-It provides JWT Authentication, Product CRUD operations, SQL Server integration, Docker support, Swagger documentation, and Unit Testing.
+The application provides JWT Authentication, Product CRUD operations, SQL Server integration, Docker support, Swagger documentation, and Unit Testing.
 
 ---
 
-## Tech Stack
+# Tech Stack
 
 - ASP.NET Core 8 Web API
 - C#
@@ -18,68 +18,105 @@ It provides JWT Authentication, Product CRUD operations, SQL Server integration,
 - AutoMapper
 - FluentValidation
 - Serilog
-- Swagger
-- Docker
+- Swagger / OpenAPI
+- Docker & Docker Compose
 - xUnit
 - Moq
 
 ---
 
-## Project Architecture
+# Project Architecture
 
-- API
-- Application
-- Domain
-- Infrastructure
-- Tests
+```
+CRNTechnicalAssessment
+│
+├── CRNTechnicalAssessment.API
+├── CRNTechnicalAssessment.Application
+├── CRNTechnicalAssessment.Domain
+├── CRNTechnicalAssessment.Infrastructure
+└── CRNTechnicalAssessment.Tests
+```
 
 ---
 
-## Features
+# Features
 
 - JWT Authentication
-- Product CRUD
+- Product CRUD APIs
 - Repository Pattern
+- Unit of Work
 - Service Layer
 - Global Exception Middleware
-- SQL Server
-- Docker Compose
-- Swagger UI
+- SQL Server Integration
+- Docker & Docker Compose
+- Swagger Documentation
 - Unit Testing
 
 ---
 
-## Running the Project
+# Getting Started
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/sachin7161/CRNTechnicalAssessment.git
+
+cd CRNTechnicalAssessment
 ```
 
-### Run Docker
+---
+
+## Run using .NET CLI
+
+```bash
+dotnet restore
+
+dotnet build
+
+dotnet run --project CRNTechnicalAssessment.API
+```
+
+---
+
+## Run using Docker
 
 ```bash
 docker compose up --build
 ```
 
-### Swagger
+Stop Containers
+
+```bash
+docker compose down
+```
+
+---
+
+# Swagger
+
+## Local
 
 ```
 https://localhost:7206/swagger
 ```
 
----
-
-## Authentication
-
-Login API
+## Docker
 
 ```
+http://localhost:8080/swagger
+```
+
+---
+
+# Authentication
+
+## Login Endpoint
+
+```http
 POST /api/Auth/login
 ```
 
-Sample Request
+### Request
 
 ```json
 {
@@ -90,23 +127,23 @@ Sample Request
 
 ---
 
-## Product APIs
+# Product APIs
 
-```
-GET    /api/Product
+```http
+GET      /api/Product
 
-GET    /api/Product/{id}
+GET      /api/Product/{id}
 
-POST   /api/Product
+POST     /api/Product
 
-PUT    /api/Product/{id}
+PUT      /api/Product/{id}
 
-DELETE /api/Product/{id}
+DELETE   /api/Product/{id}
 ```
 
 ---
 
-## Testing
+# Testing
 
 Run Tests
 
@@ -122,9 +159,9 @@ Result
 
 ---
 
-## Docker
+# Docker
 
-Run
+Build & Run
 
 ```bash
 docker compose up --build
@@ -138,9 +175,28 @@ docker compose down
 
 ---
 
-## Author
+# Project Highlights
 
-Sachin Kalel
+- ASP.NET Core 8
+- Clean Architecture
+- Repository Pattern
+- Unit of Work
+- Entity Framework Core
+- SQL Server
+- JWT Authentication
+- Swagger/OpenAPI
+- Docker Support
+- Global Exception Handling
+- AutoMapper
+- FluentValidation
+- Serilog Logging
+- xUnit & Moq Testing
+
+---
+
+# Author
+
+**Sachin Kalel**
 
 .NET Full Stack Developer
 
