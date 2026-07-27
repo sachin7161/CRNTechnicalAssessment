@@ -1,0 +1,4 @@
+2026-07-24 07:35:33.436 +00:00 [INF] Application Started Successfully
+2026-07-24 07:35:33.608 +00:00 [WRN] Using an in-memory repository. Keys will not be persisted to storage.
+2026-07-24 07:35:33.611 +00:00 [WRN] Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+2026-07-24 07:35:33.668 +00:00 [WRN] No XML encryptor configured. Key {474157bc-e246-42fa-9098-b9d968367478} may be persisted to storage in unencrypted form.

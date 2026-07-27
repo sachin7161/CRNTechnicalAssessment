@@ -1,0 +1,39 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: crn-sqlserver
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Password@123"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+
+  crntechnicalassessment.api:
+    image: ${DOCKER_REGISTRY-}crntechnicalassessmentapi
+    build:
+      context: .
+      dockerfile: CRNTechnicalAssessment.API/Dockerfile
+
+    depends_on:
+      - sqlserver
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: 8080
+      ASPNETCORE_HTTPS_PORTS: 8081
+
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=CRNTechnicalAssessmentDb;User Id=sa;Password=Password@123;TrustServerCertificate=True"
+
+      Jwt__Key: "CRNTechnicalAssessment@2026SuperSecretKey12345"
+      Jwt__Issuer: "CRNTechnicalAssessment"
+      Jwt__Audience: "CRNTechnicalAssessmentUsers"
+      Jwt__ExpiryMinutes: "30"
+
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+
+volumes:
+  sql_data:

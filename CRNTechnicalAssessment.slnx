@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="CRNTechnicalAssessment.API/CRNTechnicalAssessment.API.csproj" />
+  <Project Path="CRNTechnicalAssessment.Application/CRNTechnicalAssessment.Application.csproj" />
+  <Project Path="CRNTechnicalAssessment.Domain/CRNTechnicalAssessment.Domain.csproj" />
+  <Project Path="CRNTechnicalAssessment.Infrastructure/CRNTechnicalAssessment.Infrastructure.csproj" />
+  <Project Path="CRNTechnicalAssessment.Tests/CRNTechnicalAssessment.Tests.csproj" Id="38dbbc41-9c2d-421d-918a-0831d2e21027" />
+</Solution>
