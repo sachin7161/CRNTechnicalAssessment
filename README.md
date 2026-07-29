@@ -2,15 +2,6 @@
 
 ## Overview
 
-
-This project is a RESTful Web API built using **ASP.NET Core 8** following **Clean Architecture** principles.
-
-The application provides JWT Authentication, Product CRUD operations, SQL Server integration, Docker support, Swagger documentation, and Unit Testing.
-
----
-
-# Tech Stack
-
 This project is a RESTful Web API developed using **.NET 8** and **ASP.NET Core Web API** as part of the **CRN Technical Assessment**.
 
 The application implements secure Product CRUD operations using **JWT Authentication**, **Entity Framework Core**, **SQL Server**, **Repository Pattern**, **Unit of Work**, **FluentValidation**, **Global Exception Handling**, **Swagger Documentation**, and **Docker**.
@@ -19,56 +10,10 @@ The application implements secure Product CRUD operations using **JWT Authentica
 
 # Features
 
-
 - JWT Authentication
 - Refresh Token Authentication
 - Product CRUD Operations
 - Entity Framework Core
-<<<<<<< HEAD
-- SQL Server
-- JWT Authentication
-- AutoMapper
-- FluentValidation
-- Serilog
-- Swagger / OpenAPI
-- Docker & Docker Compose
-- xUnit
-- Moq
-
----
-
-# Project Architecture
-
-```
-CRNTechnicalAssessment
-│
-├── CRNTechnicalAssessment.API
-├── CRNTechnicalAssessment.Application
-├── CRNTechnicalAssessment.Domain
-├── CRNTechnicalAssessment.Infrastructure
-└── CRNTechnicalAssessment.Tests
-```
-
----
-
-# Features
-
-- JWT Authentication
-- Product CRUD APIs
-- Repository Pattern
-- Unit of Work
-- Service Layer
-- Global Exception Middleware
-- SQL Server Integration
-- Docker & Docker Compose
-- Swagger Documentation
-- Unit Testing
-
----
-
-# Getting Started
-
-=======
 - Repository Pattern
 - Unit of Work Pattern
 - FluentValidation
@@ -187,45 +132,18 @@ POST /api/Auth/login
 
 # Running the Project
 
->>>>>>> 2abc2b1 (docs: update README and add API screenshots)
 ## Clone Repository
 
 ```bash
 git clone https://github.com/sachin7161/CRNTechnicalAssessment.git
-
-cd CRNTechnicalAssessment
 ```
 
-<<<<<<< HEAD
----
-
-## Run using .NET CLI
-
-```bash
-dotnet restore
-
-dotnet build
-
-dotnet run --project CRNTechnicalAssessment.API
-```
-
----
-
-## Run using Docker
-=======
 ## Open Solution
->>>>>>> 2abc2b1 (docs: update README and add API screenshots)
 
 ```
 Visual Studio 2022
 ```
 
-<<<<<<< HEAD
-Stop Containers
-
-```bash
-docker compose down
-=======
 ## Restore Packages
 
 ```bash
@@ -248,92 +166,23 @@ or simply press
 
 ```
 F5
->>>>>>> 2abc2b1 (docs: update README and add API screenshots)
 ```
 
 ---
 
 # Swagger
 
-<<<<<<< HEAD
-## Local
-=======
 ### Local
->>>>>>> 2abc2b1 (docs: update README and add API screenshots)
 
 ```
 https://localhost:7206/swagger
 ```
 
-<<<<<<< HEAD
-## Docker
-
-```
-http://localhost:8080/swagger
-```
-
----
-
-# Authentication
-
-## Login Endpoint
-
-```http
-POST /api/Auth/login
-```
-
-### Request
-
-```json
-{
-  "username": "admin",
-  "password": "Pass@123"
-}
-```
-
----
-
-# Product APIs
-
-```http
-GET      /api/Product
-
-GET      /api/Product/{id}
-
-POST     /api/Product
-
-PUT      /api/Product/{id}
-
-DELETE   /api/Product/{id}
-```
-
----
-
-# Testing
-
-Run Tests
-
-```bash
-dotnet test
-```
-
-Result
-
-```
-8 Tests Passed
-```
-
-=======
->>>>>>> 2abc2b1 (docs: update README and add API screenshots)
 ---
 
 # Docker
 
-<<<<<<< HEAD
-Build & Run
-=======
 ## Build & Run
->>>>>>> 2abc2b1 (docs: update README and add API screenshots)
 
 ```bash
 docker compose up --build
@@ -353,36 +202,11 @@ http://localhost:8080/swagger
 
 ---
 
-<<<<<<< HEAD
-# Project Highlights
-
-- ASP.NET Core 8
-- Clean Architecture
-- Repository Pattern
-- Unit of Work
-- Entity Framework Core
-- SQL Server
-- JWT Authentication
-- Swagger/OpenAPI
-- Docker Support
-- Global Exception Handling
-- AutoMapper
-- FluentValidation
-- Serilog Logging
-- xUnit & Moq Testing
-
----
-
-# Author
-
-**Sachin Kalel**
-=======
 # Running Unit Tests
 
 ```bash
 dotnet test
 ```
->>>>>>> 2abc2b1 (docs: update README and add API screenshots)
 
 ### Test Result
 
